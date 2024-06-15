@@ -168,6 +168,25 @@ namespace LoanManagement.Forms
 
             dgAddress.MultiSelect = true;
             dgCustomers.MultiSelect = true;
+
+            DataTable dtPermission = AppUserPermissionService.Get(frmmain.userLogon.AppUserId);
+            foreach (DataRow dr in dtPermission.Rows)
+            {
+                if (dr["UserPermission"].ToString() == "CustomerCreate")
+                {
+                    btnNew.Visible = true;
+                }
+
+                if (dr["UserPermission"].ToString() == "CustomerModify")
+                {
+                    btnEdit.Visible = true;
+                }
+
+                if (dr["UserPermission"].ToString() == "CustomerDelete")
+                {
+                    btnDelete.Visible = true;
+                }
+            }
         }
 
         private void dgAddress_SelectionChanged(object sender, EventArgs e)

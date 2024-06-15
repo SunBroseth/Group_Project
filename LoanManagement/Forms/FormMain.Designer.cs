@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pLogOut = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lblLogOut = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pMain = new System.Windows.Forms.Panel();
@@ -52,6 +55,8 @@
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.pLogOut.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pMain.SuspendLayout();
             this.pUser.SuspendLayout();
@@ -71,6 +76,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.panel1.Controls.Add(this.pLogOut);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -78,6 +84,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1244, 84);
             this.panel1.TabIndex = 0;
+            // 
+            // pLogOut
+            // 
+            this.pLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(11)))), ((int)(((byte)(96)))), ((int)(((byte)(50)))));
+            this.pLogOut.Controls.Add(this.pictureBox8);
+            this.pLogOut.Controls.Add(this.lblLogOut);
+            this.pLogOut.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pLogOut.Location = new System.Drawing.Point(1078, 0);
+            this.pLogOut.Name = "pLogOut";
+            this.pLogOut.Size = new System.Drawing.Size(166, 84);
+            this.pLogOut.TabIndex = 7;
+            this.pLogOut.Click += new System.EventHandler(this.pLogOut_Click);
+            this.pLogOut.MouseEnter += new System.EventHandler(this.pLogOut_MouseEnter);
+            this.pLogOut.MouseLeave += new System.EventHandler(this.pLogOut_MouseLeave);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::LoanManagement.Properties.Resources.logout;
+            this.pictureBox8.Location = new System.Drawing.Point(30, 27);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pLogOut_Click);
+            this.pictureBox8.MouseEnter += new System.EventHandler(this.pLogOut_MouseEnter);
+            this.pictureBox8.MouseLeave += new System.EventHandler(this.pLogOut_MouseLeave);
+            // 
+            // lblLogOut
+            // 
+            this.lblLogOut.AutoSize = true;
+            this.lblLogOut.ForeColor = System.Drawing.Color.White;
+            this.lblLogOut.Location = new System.Drawing.Point(60, 30);
+            this.lblLogOut.Name = "lblLogOut";
+            this.lblLogOut.Size = new System.Drawing.Size(122, 31);
+            this.lblLogOut.TabIndex = 0;
+            this.lblLogOut.Text = "LOG OUT";
+            this.lblLogOut.Click += new System.EventHandler(this.pLogOut_Click);
+            this.lblLogOut.MouseEnter += new System.EventHandler(this.pLogOut_MouseEnter);
+            this.lblLogOut.MouseLeave += new System.EventHandler(this.pLogOut_MouseLeave);
             // 
             // label1
             // 
@@ -125,6 +171,7 @@
             this.pUser.Name = "pUser";
             this.pUser.Size = new System.Drawing.Size(219, 46);
             this.pUser.TabIndex = 7;
+            this.pUser.Click += new System.EventHandler(this.pUser_Click);
             this.pUser.MouseEnter += new System.EventHandler(this.pUser_MouseEnter);
             this.pUser.MouseLeave += new System.EventHandler(this.pUser_MouseLeave);
             // 
@@ -136,6 +183,7 @@
             this.lblUser.Size = new System.Drawing.Size(211, 31);
             this.lblUser.TabIndex = 3;
             this.lblUser.Text = "User Management";
+            this.lblUser.Click += new System.EventHandler(this.pUser_Click);
             this.lblUser.MouseEnter += new System.EventHandler(this.pUser_MouseEnter);
             this.lblUser.MouseLeave += new System.EventHandler(this.pUser_MouseLeave);
             // 
@@ -148,6 +196,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pUser_Click);
             this.pictureBox7.MouseEnter += new System.EventHandler(this.pUser_MouseEnter);
             this.pictureBox7.MouseLeave += new System.EventHandler(this.pUser_MouseLeave);
             // 
@@ -161,6 +210,8 @@
             this.pLoan.Name = "pLoan";
             this.pLoan.Size = new System.Drawing.Size(219, 46);
             this.pLoan.TabIndex = 6;
+            this.pLoan.Visible = false;
+            this.pLoan.Click += new System.EventHandler(this.pLoan_Click);
             this.pLoan.MouseEnter += new System.EventHandler(this.pLoan_MouseEnter);
             this.pLoan.MouseLeave += new System.EventHandler(this.pLoan_MouseLeave);
             // 
@@ -172,6 +223,7 @@
             this.lblLoan.Size = new System.Drawing.Size(67, 31);
             this.lblLoan.TabIndex = 3;
             this.lblLoan.Text = "Loan";
+            this.lblLoan.Click += new System.EventHandler(this.pLoan_Click);
             this.lblLoan.MouseEnter += new System.EventHandler(this.pLoan_MouseEnter);
             this.lblLoan.MouseLeave += new System.EventHandler(this.pLoan_MouseLeave);
             // 
@@ -184,6 +236,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pLoan_Click);
             this.pictureBox6.MouseEnter += new System.EventHandler(this.pLoan_MouseEnter);
             this.pictureBox6.MouseLeave += new System.EventHandler(this.pLoan_MouseLeave);
             // 
@@ -197,6 +250,7 @@
             this.pCollateral.Name = "pCollateral";
             this.pCollateral.Size = new System.Drawing.Size(219, 46);
             this.pCollateral.TabIndex = 5;
+            this.pCollateral.Click += new System.EventHandler(this.pCollateral_Click);
             this.pCollateral.MouseEnter += new System.EventHandler(this.pCollateral_MouseEnter);
             this.pCollateral.MouseLeave += new System.EventHandler(this.pCollateral_MouseLeave);
             // 
@@ -208,6 +262,7 @@
             this.lblCollateral.Size = new System.Drawing.Size(117, 31);
             this.lblCollateral.TabIndex = 3;
             this.lblCollateral.Text = "Collateral";
+            this.lblCollateral.Click += new System.EventHandler(this.pCollateral_Click);
             this.lblCollateral.MouseEnter += new System.EventHandler(this.pCollateral_MouseEnter);
             this.lblCollateral.MouseLeave += new System.EventHandler(this.pCollateral_MouseLeave);
             // 
@@ -220,6 +275,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pCollateral_Click);
             // 
             // pCreditOfficer
             // 
@@ -231,6 +287,8 @@
             this.pCreditOfficer.Name = "pCreditOfficer";
             this.pCreditOfficer.Size = new System.Drawing.Size(219, 46);
             this.pCreditOfficer.TabIndex = 4;
+            this.pCreditOfficer.Visible = false;
+            this.pCreditOfficer.Click += new System.EventHandler(this.pCreditOfficer_Click);
             this.pCreditOfficer.MouseEnter += new System.EventHandler(this.pCreditOfficer_MouseEnter);
             this.pCreditOfficer.MouseLeave += new System.EventHandler(this.pCreditOfficer_MouseLeave);
             // 
@@ -242,6 +300,7 @@
             this.lblCreditOfficer.Size = new System.Drawing.Size(156, 31);
             this.lblCreditOfficer.TabIndex = 3;
             this.lblCreditOfficer.Text = "Credit Officer";
+            this.lblCreditOfficer.Click += new System.EventHandler(this.pCreditOfficer_Click);
             this.lblCreditOfficer.MouseEnter += new System.EventHandler(this.pCreditOfficer_MouseEnter);
             this.lblCreditOfficer.MouseLeave += new System.EventHandler(this.pCreditOfficer_MouseLeave);
             // 
@@ -254,6 +313,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pCreditOfficer_Click);
             this.pictureBox4.MouseEnter += new System.EventHandler(this.pCreditOfficer_MouseEnter);
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pCreditOfficer_MouseLeave);
             // 
@@ -267,6 +327,7 @@
             this.pCustomer.Name = "pCustomer";
             this.pCustomer.Size = new System.Drawing.Size(219, 46);
             this.pCustomer.TabIndex = 3;
+            this.pCustomer.Visible = false;
             this.pCustomer.Click += new System.EventHandler(this.pCustomer_Click);
             this.pCustomer.MouseEnter += new System.EventHandler(this.pCustomer_MouseEnter);
             this.pCustomer.MouseLeave += new System.EventHandler(this.pCustomer_MouseLeave);
@@ -306,6 +367,7 @@
             this.pDashboard.Name = "pDashboard";
             this.pDashboard.Size = new System.Drawing.Size(219, 46);
             this.pDashboard.TabIndex = 2;
+            this.pDashboard.Click += new System.EventHandler(this.pDashboard_Click);
             this.pDashboard.MouseEnter += new System.EventHandler(this.pDashboard_MouseEnter);
             this.pDashboard.MouseLeave += new System.EventHandler(this.pDashboard_MouseLeave);
             // 
@@ -317,6 +379,7 @@
             this.lblDashboard.Size = new System.Drawing.Size(132, 31);
             this.lblDashboard.TabIndex = 2;
             this.lblDashboard.Text = "Dashboard";
+            this.lblDashboard.Click += new System.EventHandler(this.pDashboard_Click);
             this.lblDashboard.MouseEnter += new System.EventHandler(this.pDashboard_MouseEnter);
             this.lblDashboard.MouseLeave += new System.EventHandler(this.pDashboard_MouseLeave);
             // 
@@ -329,6 +392,7 @@
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 2;
             this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.pDashboard_Click);
             this.PictureBox1.MouseEnter += new System.EventHandler(this.pDashboard_MouseEnter);
             this.PictureBox1.MouseLeave += new System.EventHandler(this.pDashboard_MouseLeave);
             // 
@@ -353,8 +417,12 @@
             this.Name = "FormMain";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pLogOut.ResumeLayout(false);
+            this.pLogOut.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pMain.ResumeLayout(false);
             this.pUser.ResumeLayout(false);
@@ -404,6 +472,9 @@
         private System.Windows.Forms.Label lblCustomer;
         private System.Windows.Forms.Label lblDashboard;
         private System.Windows.Forms.Panel pnMain;
+        private System.Windows.Forms.Panel pLogOut;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label lblLogOut;
     }
 }
 

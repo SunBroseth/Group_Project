@@ -83,10 +83,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Models\Address.cs" />
+    <Compile Include="Data\Models\AppUser.cs" />
+    <Compile Include="Data\Models\AppUserPermission.cs" />
+    <Compile Include="Data\Models\Collateral.cs" />
+    <Compile Include="Data\Models\CollateralType.cs" />
+    <Compile Include="Data\Models\CreditOfficer.cs" />
     <Compile Include="Data\Models\Customer.cs" />
+    <Compile Include="Data\Models\Loan.cs" />
+    <Compile Include="Data\Models\LoanDetail.cs" />
     <Compile Include="Data\Services\AddressService.cs" />
+    <Compile Include="Data\Services\AppUserPermissionService.cs" />
+    <Compile Include="Data\Services\AppUserService.cs" />
+    <Compile Include="Data\Services\CollateralService.cs" />
+    <Compile Include="Data\Services\CollateralTypeService.cs" />
+    <Compile Include="Data\Services\CreditOfficerService.cs" />
     <Compile Include="Data\Services\CustomerService.cs" />
     <Compile Include="Data\Services\LoanContext.cs" />
+    <Compile Include="Data\Services\LoanDetailService.cs" />
+    <Compile Include="Data\Services\LoanService.cs" />
+    <Compile Include="Forms\FormAddEditCollateral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditCollateral.Designer.cs">
+      <DependentUpon>FormAddEditCollateral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditCreditOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditCreditOff.Designer.cs">
+      <DependentUpon>FormAddEditCreditOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddEditUserMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddEditUserMgt.Designer.cs">
+      <DependentUpon>FormAddEditUserMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCollateral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCollateral.Designer.cs">
+      <DependentUpon>FormCollateral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCreditOfficer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCreditOfficer.Designer.cs">
+      <DependentUpon>FormCreditOfficer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,22 +143,73 @@
     <Compile Include="Forms\FormCustomerAddEdit.Designer.cs">
       <DependentUpon>FormCustomerAddEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDashboard.Designer.cs">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLoanTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLoanTransaction.Designer.cs">
+      <DependentUpon>FormLoanTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormUserManangement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUserManangement.Designer.cs">
+      <DependentUpon>FormUserManangement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormAddEditCollateral.resx">
+      <DependentUpon>FormAddEditCollateral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditCreditOff.resx">
+      <DependentUpon>FormAddEditCreditOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddEditUserMgt.resx">
+      <DependentUpon>FormAddEditUserMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCollateral.resx">
+      <DependentUpon>FormCollateral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCreditOfficer.resx">
+      <DependentUpon>FormCreditOfficer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCustomerAddEdit.resx">
       <DependentUpon>FormCustomerAddEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLoanTransaction.resx">
+      <DependentUpon>FormLoanTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUserManangement.resx">
+      <DependentUpon>FormUserManangement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -173,7 +268,27 @@
   <ItemGroup>
     <None Include="Resources\user.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer__2_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoanChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoanChart2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

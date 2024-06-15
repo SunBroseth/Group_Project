@@ -64,29 +64,43 @@ namespace LoanManagement.Forms
             _customer.Phone = txtPhone.Text.Trim();
             _customer.Email = txtEmail.Text.Trim();
             _address.AddressName = txtAddress.Text.Trim();
-            if (newcustomer)
+
+            if (txtAddress.Text == "" || txtCustomerName.Text == "")
             {
-                CustomerService.Add(_customer);
-                
+                MessageBox.Show("Data required!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                if (this.DialogResult == DialogResult.OK)
+                    return;
+
             }
             else
             {
-                CustomerService.Update(_customer);
-               
-            }
-            if (newaddress)
-            {
-                AddressService.Add(_address);
-            }
-            else
-            {
-                AddressService.Update(_address);
-            }
+                if (newcustomer)
+                {
+                    CustomerService.Add(_customer);
+
+                }
+                else
+                {
+                    CustomerService.Update(_customer);
+
+                }
 
 
+                if (newaddress)
+                {
+                    AddressService.Add(_address);
+                }
+                else
+                {
+                    AddressService.Update(_address);
+                }
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

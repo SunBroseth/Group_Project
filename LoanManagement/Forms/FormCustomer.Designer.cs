@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,26 +40,28 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgCustomers = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSex = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtDOB = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPOB = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDOB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtSex = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dgAddress = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomers)).BeginInit();
             this.panel6.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgAddress)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +95,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnEdit);
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnNew);
@@ -112,6 +115,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Visible = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
@@ -124,6 +128,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnNew
@@ -136,6 +141,7 @@
             this.btnNew.TabIndex = 0;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Visible = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // panel4
@@ -157,16 +163,19 @@
             // 
             // dgCustomers
             // 
-            this.dgCustomers.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgCustomers.AllowUserToAddRows = false;
+            this.dgCustomers.AllowUserToResizeColumns = false;
+            this.dgCustomers.AllowUserToResizeRows = false;
+            this.dgCustomers.BackgroundColor = System.Drawing.Color.White;
             this.dgCustomers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCustomers.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgCustomers.Location = new System.Drawing.Point(0, 0);
@@ -182,83 +191,163 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Controls.Add(this.dgAddress);
-            this.panel6.Controls.Add(this.txtAddress);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.txtEmail);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.txtPhone);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.txtPOB);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.txtDOB);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.txtSex);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.txtCustomerName);
-            this.panel6.Controls.Add(this.label2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(261, 151);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(983, 547);
             this.panel6.TabIndex = 5;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtSex);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtAddress);
+            this.groupBox1.Controls.Add(this.txtCustomerName);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtDOB);
+            this.groupBox1.Controls.Add(this.txtPhone);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtPOB);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(33, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(950, 547);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Customer Details";
+            // 
+            // txtSex
+            // 
+            this.txtSex.BackColor = System.Drawing.Color.White;
+            this.txtSex.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSex.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSex.Location = new System.Drawing.Point(177, 85);
+            this.txtSex.Name = "txtSex";
+            this.txtSex.ReadOnly = true;
+            this.txtSex.Size = new System.Drawing.Size(272, 32);
+            this.txtSex.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(-18, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(189, 28);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Customer Name";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // txtAddress
             // 
-            this.txtAddress.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAddress.BackColor = System.Drawing.Color.White;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(234, 305);
+            this.txtAddress.Location = new System.Drawing.Point(177, 323);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(272, 99);
             this.txtAddress.TabIndex = 32;
-           
+            // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.BackColor = System.Drawing.Color.White;
+            this.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustomerName.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(177, 42);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.ReadOnly = true;
+            this.txtCustomerName.Size = new System.Drawing.Size(272, 32);
+            this.txtCustomerName.TabIndex = 20;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(39, 305);
+            this.label8.Location = new System.Drawing.Point(-18, 323);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(189, 31);
             this.label8.TabIndex = 31;
             this.label8.Text = "Address";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(-18, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 31);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Sex";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(234, 256);
+            this.txtEmail.Location = new System.Drawing.Point(177, 274);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(272, 32);
             this.txtEmail.TabIndex = 30;
             // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(-18, 131);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(189, 31);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Date of Birth";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(39, 256);
+            this.label7.Location = new System.Drawing.Point(-18, 274);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(189, 31);
             this.label7.TabIndex = 29;
             this.label7.Text = "Email";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // txtDOB
+            // 
+            this.txtDOB.BackColor = System.Drawing.Color.White;
+            this.txtDOB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDOB.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDOB.Location = new System.Drawing.Point(177, 131);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.ReadOnly = true;
+            this.txtDOB.Size = new System.Drawing.Size(272, 32);
+            this.txtDOB.TabIndex = 24;
+            // 
             // txtPhone
             // 
-            this.txtPhone.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPhone.BackColor = System.Drawing.Color.White;
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(234, 208);
+            this.txtPhone.Location = new System.Drawing.Point(177, 226);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(272, 32);
             this.txtPhone.TabIndex = 28;
             // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(-18, 178);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(189, 31);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Place of Birth";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(39, 208);
+            this.label6.Location = new System.Drawing.Point(-18, 226);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(189, 31);
             this.label6.TabIndex = 27;
@@ -267,87 +356,21 @@
             // 
             // txtPOB
             // 
-            this.txtPOB.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPOB.BackColor = System.Drawing.Color.White;
             this.txtPOB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPOB.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPOB.Location = new System.Drawing.Point(234, 160);
+            this.txtPOB.Location = new System.Drawing.Point(177, 178);
             this.txtPOB.Name = "txtPOB";
             this.txtPOB.ReadOnly = true;
             this.txtPOB.Size = new System.Drawing.Size(272, 32);
             this.txtPOB.TabIndex = 26;
             // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(39, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 31);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Place of Birth";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtDOB
-            // 
-            this.txtDOB.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDOB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDOB.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDOB.Location = new System.Drawing.Point(234, 113);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.ReadOnly = true;
-            this.txtDOB.Size = new System.Drawing.Size(272, 32);
-            this.txtDOB.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(39, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 31);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Date of Birth";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtSex
-            // 
-            this.txtSex.BackColor = System.Drawing.SystemColors.Control;
-            this.txtSex.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSex.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSex.Location = new System.Drawing.Point(234, 67);
-            this.txtSex.Name = "txtSex";
-            this.txtSex.ReadOnly = true;
-            this.txtSex.Size = new System.Drawing.Size(272, 32);
-            this.txtSex.TabIndex = 22;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(39, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 31);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Sex";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtCustomerName
-            // 
-            this.txtCustomerName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCustomerName.Font = new System.Drawing.Font("Nokora", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(234, 24);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.ReadOnly = true;
-            this.txtCustomerName.Size = new System.Drawing.Size(272, 32);
-            this.txtCustomerName.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(39, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 28);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Customer Name";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // dgAddress
             // 
-            this.dgAddress.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgAddress.AllowUserToAddRows = false;
+            this.dgAddress.AllowUserToResizeColumns = false;
+            this.dgAddress.AllowUserToResizeRows = false;
+            this.dgAddress.BackgroundColor = System.Drawing.Color.White;
             this.dgAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgAddress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAddress.Dock = System.Windows.Forms.DockStyle.Left;
@@ -386,7 +409,8 @@
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomers)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgAddress)).EndInit();
             this.ResumeLayout(false);
 
@@ -420,5 +444,6 @@
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgAddress;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
